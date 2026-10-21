@@ -1,60 +1,124 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-  table { width: 100%; border-collapse: collapse; }
-  th, td { padding: 10px; border-bottom: 1px solid #ddd; text-align: left; }
-  thead { background: #222; color: #fff; }
+<html>
+    <head>
+        <title>My Products</title>
 
-</style>
-<body>
-    <div class="nav-bar">
-        <a href="Home.html">Home</a>
-        <a href="prac1(About Us).html">About Us</a>
-        <a href="products.html">Products</a>
-    </div>
-    
-    <table>
-  <caption>Featured Games</caption>
-  <thead>
-    <tr>
-        <th>Game</th>
-        <th>Platform</th>
-        <th>Price</th>
-        <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td>Elden Ring</td>
-        <td>PC</td>
-        <td>KSH5999</td>
-        <td>
-            <button>Add to cart</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Hades II</td>
-        <td>Switch</td>
-        <td>KSH2999</td>
-        <td>
-            <button>Add to cart</button>
-        </td>
-    </tr>
-    <tr>
-        <td>Celeste</td>
-        <td>PS5</td>
-        <td>KSH4999</td>
-        <td>
-            <button>Add to cart</button>
-        </td>
-    </tr>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
 
-  </tbody>
-</table>
-</body>
+            th, td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                text-align: left;
+            }
+
+            thead {
+                background: #222;
+                color: white;
+            }
+
+            .nav-bar {
+                background: #222;
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+
+            .nav-bar a {
+                color: white;
+                text-decoration: none;
+                margin-right: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="nav-bar">
+            <a href="Home.html">Home</a>
+            <a href="prac1(About Us).html">About Us</a>
+            <a href="products.html">Products</a>
+        </div>
+
+        <h1>Featured Games</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Game</th>
+                    <th>Platform</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Elden Ring</td>
+                    <td>PC</td>
+                    <td>KSH 5999</td>
+                    <td>
+                        <button onclick="addToCart(5999)">
+                            Add to cart
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Hades II</td>
+                    <td>Switch</td>
+                    <td>KSH 2999</td>
+                    <td>
+                        <button onclick="addToCart(2999)">
+                            Add to cart
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Celeste</td>
+                    <td>PS5</td>
+                    <td>KSH 4999</td>
+                    <td>
+                        <button onclick="addToCart(4999)">
+                            Add to cart
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>My Shopping Cart</h2>
+
+        <p>Items in cart: <span id="items">0</span></p>
+
+        <p>Total Price: KSH <span id="total">0</span></p>
+
+        <button onclick="clearCart()">Clear Cart</button>
+
+        <script>
+            let total = 0;
+            let items = 0;
+
+            function addToCart(price) {
+                total = total + price;
+                items = items + 1;
+
+                document.getElementById("total").innerHTML = total;
+                document.getElementById("items").innerHTML = items;
+            }
+
+            function clearCart() {
+                total = 0;
+                items = 0;
+
+                document.getElementById("total").innerHTML = total;
+                document.getElementById("items").innerHTML = items;
+            }
+        </script>
+
+    </body>
 </html>

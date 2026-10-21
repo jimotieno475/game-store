@@ -1,9 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | EONYX</title>
+
     <style>
         body {
             background: linear-gradient(135deg, #020617, #082F49, #0E7490);
@@ -11,6 +13,24 @@
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
+        }
+
+        /* Navigation bar */
+        .nav-bar {
+            background: #222;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .nav-bar a:hover {
+            color: #06b6d4;
+            text-decoration: underline;
         }
 
         header h1 {
@@ -23,6 +43,7 @@
             text-align: center;
             background-image: url('game1.png');
             background-size: cover;
+            background-position: center;
             background-blend-mode: darken;
             background-color: rgba(0, 0, 0, 0.6);
             padding: 20px;
@@ -122,11 +143,52 @@
             display: block;
             margin: 10px auto;
         }
+
+        /* Responsive styling for small screens */
+        @media (max-width: 480px) {
+            .nav-bar {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                padding: 15px;
+            }
+
+            .nav-bar a {
+                margin-right: 8px;
+            }
+
+            .intro {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .what-we-offer {
+                padding: 0 15px 20px;
+            }
+
+            main {
+                padding: 0 15px 30px;
+            }
+
+            .staff-row {
+                gap: 25px;
+            }
+        }
     </style>
 </head>
+
 <body>
+
+    <!-- Navigation bar -->
+    <nav class="nav-bar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+    </nav>
+
     <header>
         <h1>EONYX</h1>
+
         <div class="intro">
             <p>
                 Welcome to EONYX, your ultimate destination for cutting-edge technology and innovation.
@@ -142,6 +204,7 @@
 
     <section class="what-we-offer">
         <h2>What We Offer</h2>
+
         <p>
             At EONYX, we specialize in providing games and gaming accessories that cater to the needs of gamers and tech enthusiasts alike.
             <br>
@@ -149,18 +212,23 @@
             <br>
             We are dedicated to delivering an unparalleled gaming experience, ensuring that our customers have access to the best technology available in the market.
         </p>
+
         <h3>Console Types</h3>
+
         <dl>
             <dt>Home Consoles</dt>
-            <dd>We give you the ultimate gaming experience, on large screens at home with examples like:
+            <dd>
+                We give you the ultimate gaming experience on large screens at home, with examples like:
                 <ul>
                     <li>PlayStation 5</li>
                     <li>Xbox Series X</li>
                     <li>Nintendo Switch</li>
                 </ul>
             </dd>
+
             <dt>HandHeld Consoles</dt>
-            <dd>Portable gaming consoles that can be played on the go, examples include
+            <dd>
+                Portable gaming consoles that can be played on the go, examples include:
                 <ul>
                     <li>PlayStation Vita</li>
                     <li>Nintendo 3DS</li>
@@ -168,14 +236,18 @@
                     <li>Steam Deck</li>
                 </ul>
             </dd>
+
             <dt>Nintendo Switch</dt>
-            <dd>A portable and home video game console developed by Nintendo.</dd>
+            <dd>
+                A portable and home video game console developed by Nintendo.
+            </dd>
         </dl>
     </section>
 
     <main>
         <section class="personnel-intro">
-            <h2>Personnel</h2>
+            <h2 style="color: white;">Personnel</h2>
+
             <p>
                 Our team consists of highly skilled professionals who are passionate about technology and innovation.
                 <br>
@@ -187,7 +259,12 @@
 
         <div class="staff-row">
             <section class="staff-card">
-                <img class="staff-photo" src="jim.jpg" alt="Otieno Jim Hariclint">
+                <img
+                    class="staff-photo"
+                    src="jim.jpg"
+                    alt="Otieno Jim Hariclint"
+                >
+
                 <h3>Otieno Jim Hariclint</h3>
                 <p>Programmer, editor and designer</p>
                 <p><strong>Contact:</strong> 0756789667</p>
@@ -195,7 +272,12 @@
             </section>
 
             <section class="staff-card">
-                <img class="staff-photo" src="smith.jpg" alt="Smith A">
+                <img
+                    class="staff-photo"
+                    src="smith.jpg"
+                    alt="Smith A"
+                >
+
                 <h3>Smith A</h3>
                 <p>Designer, site admin and developer</p>
                 <p><strong>Contact:</strong> 0756789668</p>
@@ -204,8 +286,10 @@
         </div>
     </main>
 
-    <footer style="text-align:center; padding: 20px; color: #cccccc; font-size: 14px;">
+    <footer style="text-align: center; padding: 20px; color: #cccccc; font-size: 14px;">
         &copy; 2026 EONYX. All rights reserved.
     </footer>
+
 </body>
 </html>
+```
